@@ -298,6 +298,6 @@ def freeze():
     """ Dump current configuration to a pom file """
     dependencies = index_manager.to_pom()
     repositories = repos_manager.to_pom()
-    template = Template(open(os.path.join(__path__[0], '../data/pom.tpl'), 'r').read())
+    template = Template(open(os.path.join(__path__[0], '../../../data/pom.tpl'), 'r').read())
     logger.info( template.substitute({'dependencies': dependencies,
         'repositories': repositories}))
